@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Bolos da Cris</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FBE6D4;
+        }
+
+        .chocolate-drip {
+            background-color: #4A2512;
+            height: 160px;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 60%,
+                95% 65%,
+                90% 60%,
+                85% 65%,
+                80% 60%,
+                75% 65%,
+                70% 60%,
+                65% 65%,
+                60% 60%,
+                55% 65%,
+                50% 60%,
+                45% 65%,
+                40% 60%,
+                35% 65%,
+                30% 60%,
+                25% 65%,
+                20% 60%,
+                15% 65%,
+                10% 60%,
+                5% 65%,
+                0% 60%
+            );
+        }
+
+        .chocolate-drip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 30% 20%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 70% 40%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 20% 60%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 80% 30%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 40% 70%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 60% 80%, #FFFFFF 2px, transparent 2px);
+            background-size: 100px 100px;
+            opacity: 0.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 20px;
+        }
+
+        .chocolate-drip::after {
+            content: '';
+            background-image: url('chocolate-drip.png');
+            height: 40px;
+            width: 100%;
+            position: relative;
+            bottom: -39px;
+            left: 0;
+            background-repeat: repeat-x;
+        }
+
+        .logo {
+            width: 200px;
+            display: block;
+            margin: 1px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.2);
+        }
+
+        h1 {
+            color: #4A2512;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.5em;
+        }
+
+        .menu-section {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .menu-section h2 {
+            color: #4A2512;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #FFD6E5;
+            padding-bottom: 10px;
+        }
+
+        .menu-item {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #FFF5F7;
+        }
+
+        .menu-item h3 {
+            color: #4A2512;
+            margin-bottom: 5px;
+        }
+
+        .menu-item p {
+            color: #6B4423;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .price {
+            color: #FF6B6B;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #4A2512;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #6B4423;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .menu-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chocolate-drip"></div>
+    <div class="container">
+        <a href="index.html">
+            <img src="logo.png" alt="Bolos da Cris" class="logo">
+        </a>
+        <h1>Nosso Cardápio</h1>
+
+        <div class="menu-section">
+            <h2>Bolos Tradicionais</h2>
+            <div class="menu-item">
+                <h3>Bolo de Laranja</h3>
+                <div class="price">R$ 15,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Yogurte</h3>
+                <div class="price">R$ 15,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Fubá Simples</h3>
+                <div class="price">R$ 15,00</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Bolos Especiais</h2>
+            <div class="menu-item">
+                <h3>Bolo de Fubá com Goiabada</h3>
+                <div class="price">R$ 18,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Fubá Cremoso</h3>
+                <div class="price">R$ 18,00</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Bolos Premium</h2>
+            <div class="menu-item">
+                <h3>Bolo de Maçã com Canela</h3>
+                <div class="price">R$ 20,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Banana</h3>
+                <div class="price">R$ 20,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Cenoura com Cobertura</h3>
+                <div class="price">R$ 20,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Limão com Cobertura</h3>
+                <div class="price">R$ 20,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Cenoura Vulcão</h3>
+                <div class="price">R$ 25,00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Bolo de Cenoura C/ Cobertura e Recheado</h3>
+                <div class="price">R$ 40,00</div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Voltar ao Início</a>
+    </div>
+</body>
+</html>

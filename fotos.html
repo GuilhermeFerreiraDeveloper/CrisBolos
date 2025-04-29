@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos - Bolos da Cris</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FBE6D4;
+        }
+
+        .chocolate-drip {
+            background-color: #4A2512;
+            height: 160px;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 60%,
+                95% 65%,
+                90% 60%,
+                85% 65%,
+                80% 60%,
+                75% 65%,
+                70% 60%,
+                65% 65%,
+                60% 60%,
+                55% 65%,
+                50% 60%,
+                45% 65%,
+                40% 60%,
+                35% 65%,
+                30% 60%,
+                25% 65%,
+                20% 60%,
+                15% 65%,
+                10% 60%,
+                5% 65%,
+                0% 60%
+            );
+        }
+
+        .chocolate-drip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 30% 20%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 70% 40%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 20% 60%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 80% 30%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 40% 70%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 60% 80%, #FFFFFF 2px, transparent 2px);
+            background-size: 100px 100px;
+            opacity: 0.6;
+        }
+
+        .chocolate-drip::after {
+            content: '';
+            background-image: url('chocolate-drip.png');
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            bottom: -39px;
+            left: 0;
+            background-repeat: repeat-x;
+        }
+
+        .logo {
+            width: 200px;
+            display: block;
+            margin: 1px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.20);
+        }
+
+        h1 {
+            color: #4A2512;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.5em;
+        }
+
+        .gallery-message {
+            text-align: center;
+            color: #6B4423;
+            font-size: 1.2em;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .gallery-item {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #4A2512;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #6B4423;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 10px;
+            }
+
+            .gallery-item img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chocolate-drip"></div>
+    <div class="container">
+        <a href="index.html">
+            <img src="logo.png" alt="Bolos da Cris" class="logo">
+        </a>
+        <h1>Galeria de Fotos</h1>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="bolo1.jpg" alt="Bolo 1">
+                <div class="caption">Bolo de Banana</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo2.jpg" alt="Bolo 2">
+                <div class="caption">Bolo de Laranja e de Limão</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo3.jpg" alt="Bolo 3">
+                <div class="caption">Bolo de Iogurte</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo4.jpg" alt="Bolo 4">
+                <div class="caption">Bolo Especias</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo5.jpg" alt="Bolo 5">
+                <div class="caption">Bolo de Chocolate</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo6.jpg" alt="Bolo 6">
+                <div class="caption">Bolos Tradicionais</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo7.jpg" alt="Bolo 7">
+                <div class="caption">Bolo de Fuba Cremoso</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo8.jpg" alt="Bolo 8">
+                <div class="caption">Bolo de Cenoura Vulcão</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo9.jpg" alt="Bolo 9">
+                <div class="caption">Bolo de Cenoura c/ Chocolate</div>
+            </div>
+            <div class="gallery-item">
+                <img src="bolo10.jpg" alt="Bolo 10">
+                <div class="caption">Bolo de Cenoura C/ Cobertura e Recheado</div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Voltar ao Início</a>
+    </div>
+</body>
+</html>

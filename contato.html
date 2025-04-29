@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Bolos da Cris</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FBE6D4;
+        }
+
+        .chocolate-drip {
+            background-color: #4A2512;
+            height: 160px;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 60%,
+                95% 65%,
+                90% 60%,
+                85% 65%,
+                80% 60%,
+                75% 65%,
+                70% 60%,
+                65% 65%,
+                60% 60%,
+                55% 65%,
+                50% 60%,
+                45% 65%,
+                40% 60%,
+                35% 65%,
+                30% 60%,
+                25% 65%,
+                20% 60%,
+                15% 65%,
+                10% 60%,
+                5% 65%,
+                0% 60%
+            );
+        }
+
+        .chocolate-drip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 30% 20%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 70% 40%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 20% 60%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 80% 30%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 40% 70%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 60% 80%, #FFFFFF 2px, transparent 2px);
+            background-size: 100px 100px;
+            opacity: 0.6;
+        }
+
+        .chocolate-drip::after {
+            content: '';
+            background-image: url('chocolate-drip.png');
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            bottom: -39px;
+            left: 0;
+            background-repeat: repeat-x;
+        }
+
+        .logo {
+            width: 200px;
+            display: block;
+            margin: 1px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.20);
+        }
+
+        h1 {
+            color: #4A2512;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2.5em;
+        }
+
+        .contact-card {
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-info {
+            margin: 20px 0;
+        }
+
+        .contact-info h2 {
+            color: #4A2512;
+            margin-bottom: 10px;
+        }
+
+        .phone-number {
+            font-size: 1.8em;
+            color: #FF6B6B;
+            margin: 20px 0;
+            display: block;
+            text-decoration: none;
+        }
+
+        .phone-number:hover {
+            color: #FF8787;
+        }
+
+        .contact-text {
+            color: #6B4423;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .social-media {
+            margin: 30px 0;
+        }
+
+        .social-media a {
+            color: #4A2512;
+            font-size: 2em;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #6B4423;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #4A2512;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #6B4423;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-card {
+                padding: 20px;
+                margin: 20px 10px;
+            }
+
+            .phone-number {
+                font-size: 1.5em;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="chocolate-drip"></div>
+    <div class="container">
+        <a href="index.html">
+            <img src="logo.png" alt="Bolos da Cris" class="logo">
+        </a>
+        <h1>Entre em Contato</h1>
+
+        <div class="contact-card">
+            <div class="contact-info">
+                <h2>Fale com a Cris</h2>
+                <p class="contact-text">Para fazer seu pedido ou tirar dúvidas, entre em contato pelo WhatsApp:</p>
+                <a href="https://wa.me/5512978501525" class="phone-number">
+                    <i class="fab fa-whatsapp"></i>
+                    (12) 97850-1525
+                </a>
+                <p class="contact-text">Horário de atendimento:<br>Segunda a domingo, das 8h às 18h</p>
+                <div class="delivery-info">
+                    <h3>Informações de Entrega</h3>
+                    <p class="contact-text">
+                        Realizamos entregas apenas em <strong>Guaratinguetá-SP</strong>.<br>
+                        Para consultar a taxa de entrega para seu endereço, entre em contato via WhatsApp.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Voltar ao Início</a>
+    </div>
+</body>
+</html>

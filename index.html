@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolos da Cris</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FBE6D4;
+            position: relative;
+        }
+
+        .chocolate-drip {
+            background-color: #4A2512;
+            height: 160px;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            clip-path: polygon(
+                0% 0%,
+                100% 0%,
+                100% 60%,
+                95% 65%,
+                90% 60%,
+                85% 65%,
+                80% 60%,
+                75% 65%,
+                70% 60%,
+                65% 65%,
+                60% 60%,
+                55% 65%,
+                50% 60%,
+                45% 65%,
+                40% 60%,
+                35% 65%,
+                30% 60%,
+                25% 65%,
+                20% 60%,
+                15% 65%,
+                10% 60%,
+                5% 65%,
+                0% 60%
+            );
+        }
+
+        .chocolate-drip::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 30% 20%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 70% 40%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 20% 60%, #FFFFFF 2px, transparent 2px),
+                radial-gradient(circle at 80% 30%, #FFB6C1 2px, transparent 2px),
+                radial-gradient(circle at 40% 70%, #98FB98 2px, transparent 2px),
+                radial-gradient(circle at 60% 80%, #FFFFFF 2px, transparent 2px);
+            background-size: 100px 100px;
+            opacity: 0.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 200px;
+            margin: 1px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            color: #4A2512;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+
+        .subtitle {
+            color: #6B4423;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .button {
+            background-color: #4A2512;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button:hover {
+            background-color: #6B4423;
+        }
+
+        .button i {
+            font-size: 1.4em;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .logo {
+                width: 150px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="chocolate-drip"></div>
+    <div class="container">
+        <a href="index.html">
+            <img src="logo.png" alt="Bolos da Cris" class="logo">
+        </a>
+        <h1>Seja bem-vindo à<br>🍰 Bolos da Cris!</h1>
+        <p class="subtitle">Mais sabor e carinho para o seu café.</p>
+        <div class="buttons">
+            <a href="cardapio.html" class="button">
+                <i class="fas fa-book-open"></i>
+                Cardápio
+            </a>
+            <a href="fotos.html" class="button">
+                <i class="fas fa-images"></i>
+                Fotos
+            </a>
+            <a href="contato.html" class="button">
+                <i class="fas fa-phone"></i>
+                Contato
+            </a>
+        </div>
+    </div>
+</body>
+</html>
