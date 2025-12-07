@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio - Bolos da Cris</title>
+    <title>Especial de Natal - Bolos da Cris</title>
     <style>
         * {
             margin: 0;
@@ -14,6 +14,7 @@
 
         body {
             background-color: #FBE6D4;
+            color: #D32F2F;
         }
 
         .container {
@@ -35,7 +36,7 @@
         }
 
         h1 {
-            color: #4A2512;
+            color: #D32F2F;
             text-align: center;
             margin: 30px 0;
             font-size: 2.5em;
@@ -50,7 +51,7 @@
         }
 
         .menu-section h2 {
-            color: #4A2512;
+            color: #B71C1C;
             margin-bottom: 15px;
             border-bottom: 2px solid #FFD6E5;
             padding-bottom: 10px;
@@ -68,21 +69,20 @@
         }
 
         .menu-item h3 {
-            color: #4A2512;
+            color: #D32F2F;
             margin-bottom: 5px;
-        }
-
-        .menu-item p {
-            color: #6B4423;
-            font-size: 0.9em;
-            line-height: 1.4;
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
         }
 
         .price {
-            color: #FF6B6B;
+            color: #FF4F7A;
             font-weight: bold;
             font-size: 1.1em;
             margin-top: 5px;
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }
+        h1, .menu-section h2 {
+            text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
         }
 
         .back-button {
@@ -100,19 +100,6 @@
             background-color: #6B4423;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .menu-section {
-                padding: 15px;
-            }
-        }
         .top-margin {
             width: 100%;
             height: 160px;
@@ -124,6 +111,39 @@
             top: 0;
             left: 0;
         }
+        .preview-right {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            border: 2px solid #D32F2F;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        .preview-right img {
+            width: 100%;
+            height: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .menu-section .menu-item.bolotone-item:hover ~ .preview-right.preview-bolotone {
+            display: block;
+        }
+        .menu-section .menu-item.gelatina-item:hover ~ .preview-right.preview-gelatina {
+            display: block;
+        }
+        .menu-section .menu-item.pudimg-item:hover ~ .preview-right.preview-pudimg {
+            display: block;
+        }
+        .menu-section .menu-item.pudimp-item:hover ~ .preview-right.preview-pudimp {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -132,73 +152,37 @@
         <a href="index.html">
             <img src="logo.png" alt="Bolos da Cris" class="logo">
         </a>
-        <h1>Nosso Cardápio</h1>
+        <h1>Especial de Natal</h1>
 
         <div class="menu-section">
-            <h2>Bolos Tradicionais</h2>
-            <div class="menu-item">
-                <h3>Bolo de Fubá Simples 🌽</h3>
-                <div class="price">R$ 15,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Laranja 🍊</h3>
-                <div class="price">R$ 20,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Milho 🌽</h3>
-                <div class="price">R$ 20,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Fubá com Goiabada 🌽</h3>
-                <div class="price">R$ 20,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Maçã c/ Canela 🍎</h3>
-                <div class="price">R$ 20,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Banana Caramelizada 🍌</h3>
+            <h2>Delícias de Natal</h2>
+            <div class="menu-item bolotone-item">
+                <h3>Bolotone</h3>
                 <div class="price">R$ 25,00</div>
             </div>
-            <div class="menu-item">
-                <h3>Bolo de Limão c/ Cobertura 🍋</h3>
-                <div class="price">R$ 25,00</div>
+            <div class="menu-item gelatina-item">
+                <h3>Gelatina de Natal Colorida</h3>
+                <div class="price">R$ 45,00</div>
             </div>
-            <div class="menu-item">
-                <h3>Bolo de Cenoura c/ Cobertura 🥕</h3>
-                <div class="price">R$ 25,00</div>
+            <div class="menu-item pudimg-item">
+                <h3>Pudim de Leite em Pó</h3>
+                <div class="price">R$ 45,00</div>
             </div>
-            <div class="menu-item">
-                <h3>Bolo de Laranja c/ Cobertura 🍊</h3>
-                <div class="price">R$ 25,00</div>
+            <div class="menu-item pudimp-item">
+                <h3>Pudim de Leite Condensado</h3>
+                <div class="price">R$ 60,00</div>
             </div>
-            <div class="menu-item">
-                <h3>Bolo de Cenoura c/ Cobertura Vulcão 🥕🔥</h3>
-                <div class="price">R$ 35,00</div>
+            <div class="preview-right preview-bolotone">
+                <img src="bolotone.jpg" alt="Bolotone">
             </div>
-            <div class="menu-item">
-                <h3>Bolo de Cenoura c/ Cobertura e Recheado 🥕</h3>
-                <div class="price">R$ 50,00</div>
+            <div class="preview-right preview-gelatina">
+                <img src="gelatina.jpg" alt="Gelatina de Natal Colorida">
             </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Bolos Light</h2>
-            <div class="menu-item">
-                <h3>Bolo de Aveia c/ Maçã 🍎</h3>
-                <div class="price">R$ 30,00</div>
+            <div class="preview-right preview-pudimg">
+                <img src="pudimg.jpg" alt="Pudim de Leite em Pó">
             </div>
-            <div class="menu-item">
-                <h3>Bolo de Aveia c/ Banana 🍌</h3>
-                <div class="price">R$ 30,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Aveia c/ Banana e Castanha 🍌🌰</h3>
-                <div class="price">R$ 40,00</div>
-            </div>
-            <div class="menu-item">
-                <h3>Bolo de Laranja Diet 🍊</h3>
-                <div class="price">R$ 30,00</div>
+            <div class="preview-right preview-pudimp">
+                <img src="pudimp.jpg" alt="Pudim de Leite Condensado">
             </div>
         </div>
 
